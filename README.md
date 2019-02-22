@@ -2,6 +2,18 @@
 
 This is the repository for the NlaakStudiosLLC multichain docker images fork from kunstmaan/*-multichain docker images.
 
+## Docker
+*multichain-2.0-beta-2-base:latest*
+
+Build New Images: 
+```docker build . --rm --squash -t multichain-2.0-beta-2-base```
+
+Run Image: 
+```docker run -p 8080:3001 -it --rm --name multichain-base-run multichain-2.0-beta-2-base:latest```
+
+Create Docker Container:
+```docker create --name multichain-base multichain-2.0-beta-2-base:latest```
+
 ## Images
 
 * [kunstmaan/base-multichain](https://hub.docker.com/r/kunstmaan/base-multichain/): A base Ubuntu with the latest Multichain deamon installed
