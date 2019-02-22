@@ -2,8 +2,7 @@
 
 This is the repository for the NlaakStudiosLLC multichain docker images fork from kunstmaan/*-multichain docker images.
 
-## Docker
-*multichain-2.0-beta-2-base:latest*
+## Docker Base Image: (*multichain-2.0-beta-2-base:latest*)
 
 Build New Images: 
 ```docker build . --rm --squash -t multichain-2.0-beta-2-base```
