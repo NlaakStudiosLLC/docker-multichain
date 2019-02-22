@@ -13,5 +13,5 @@ RUN apt-get update \
         && wget https://www.multichain.com/download/multichain-2.0-beta-2.tar.gz \
         && tar -xvzf multichain-2.0-beta-2.tar.gz
 
-FROM scratch
+FROM alpine:latest
 COPY --from=builder /tmp/multichain-2.0-beta-2 /usr/local/bin
