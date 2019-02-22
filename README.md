@@ -4,7 +4,7 @@ This is the repository for the NlaakStudiosLLC multichain docker images fork fro
 
 ## Images
 
-* [NlaakStudiosLLC/base-multichain](https://hub.docker.com/r/NlaakStudiosLLC/base-multichain/): A Multi-Stage build with base Ubuntu as builder and scratch as final image with the latest Multichain deamon installed. Size 50MB. Use this image as a starting point if you want to create your nodes from scratch.
+* [nlaakstudios/multichain-2.0-beta-2-base](https://hub.docker.com/r/NlaakStudiosLLC/multichain-2.0-beta-2-base/): A Multi-Stage build with base Ubuntu as builder and alpine as final image with the latest Multichain deamon installed. Size 62MB. Use this image as a starting point if you want to create your nodes from scratch.
     ### Docker Base Image: (*multichain-2.0-beta-2-base:latest*)
 
     Build New Images:
@@ -16,7 +16,18 @@ This is the repository for the NlaakStudiosLLC multichain docker images fork fro
     Create Docker Container:
     ```docker create --name multichain-base multichain-2.0-beta-2-base:latest```
 
-* [NlaakStudiosLLC/master-multichain](https://hub.docker.com/r/NlaakStudiosLLC/master-multichain/): Based on the "base" image running a master node, creates a blockchain and runs it. *Important: only for development since any node can connect, anyone can administer and the RPC interface is open to all.*
+* [nlaakstudios/multichain-2.0-beta-2-base](https://hub.docker.com/r/nlaakstudios/multichain-2.0-beta-2-master/): Based on the "base" image running a master node, creates a blockchain and runs it. *Important: only for development since any node can connect, anyone can administer and the RPC interface is open to all.*
+    ### Docker Master Image: (*multichain-2.0-beta-2-master:latest*)
+
+    Build New Images:
+    ```docker build . --rm --squash -t multichain-2.0-beta-2-master```
+
+    Run Image:
+    ```docker run -p 8080:3001 -it --rm --name multichain-master-run multichain-2.0-beta-2-master:latest```
+
+    Create Docker Container:
+    ```docker create --name multichain-master multichain-2.0-beta-2-master:latest```
+
 * [NlaakStudiosLLC/node-multichain](https://hub.docker.com/r/NlaakStudiosLLC/node-multichain/): Based on the same "base" image and connects to the master node
 * [NlaakStudiosLLC/explorer-multichain](https://hub.docker.com/r/NlaakStudiosLLC/explorer-multichain/): A node with the Multichain explorer installed
 
