@@ -4,7 +4,7 @@ This is the repository for the NlaakStudiosLLC multichain docker images fork fro
 
 ## Images
 
-* [NlaakStudiosLLC/base-multichain](https://hub.docker.com/r/NlaakStudiosLLC/base-multichain/): A base Ubuntu with the latest Multichain deamon installed
+* [NlaakStudiosLLC/base-multichain](https://hub.docker.com/r/NlaakStudiosLLC/base-multichain/): A Multi-Stage build with base Ubuntu as builder and scratch as final image with the latest Multichain deamon installed. Size 50MB
     ### Docker Base Image: (*multichain-2.0-beta-2-base:latest*)
 
     Build New Images: 
