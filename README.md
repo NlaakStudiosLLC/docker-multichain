@@ -28,7 +28,18 @@ This is the repository for the NlaakStudiosLLC multichain docker images fork fro
     Create Docker Container:
     ```docker create --name multichain-master multichain-2.0-beta-2-master:latest```
 
-* [NlaakStudiosLLC/node-multichain](https://hub.docker.com/r/NlaakStudiosLLC/node-multichain/): Based on the same "base" image and connects to the master node
+* [nlaakstudios/multichain-2.0-beta-2-node](https://hub.docker.com/r/nlaakstudios/multichain-2.0-beta-2-node/): Based on the same "base" image and connects to the master node
+    ### Docker Node Image: (*multichain-2.0-beta-2-node:latest*)
+
+    Build New Images:
+    ```docker build . --rm --squash -t multichain-2.0-beta-2-node```
+
+    Run Image:
+    ```docker run -p 8080:3001 -it --rm --name multichain-node-run multichain-2.0-beta-2-node:latest```
+
+    Create Docker Container:
+    ```docker create --name multichain-node multichain-2.0-beta-2-node:latest```
+
 * [NlaakStudiosLLC/explorer-multichain](https://hub.docker.com/r/NlaakStudiosLLC/explorer-multichain/): A node with the Multichain explorer installed
 
 ## Running the cluster
