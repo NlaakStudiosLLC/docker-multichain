@@ -1,6 +1,6 @@
 # docker-multichain
 
-This is the repository for the kunstmaan/*-multichain docker images.
+This is the repository for the NlaakStudiosLLC multichain docker images fork from kunstmaan/*-multichain docker images.
 
 ## Images
 
